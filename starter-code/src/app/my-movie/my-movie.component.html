@@ -1,0 +1,34 @@
+
+
+<div class="col s12 m7">
+        <h2 class="header">Room:{{movieList.getMovie(movieId).room}} {{movieList.getMovie(movieId).title}}</h2>
+        <div class="card horizontal">
+          <div class="card-image">
+                <img src="{{movieList.getMovie(movieId).poster}}" alt="">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+                    <p> <b> Synopsis:</b>  {{movieList.getMovie(movieId).synopsis}}</p>
+                    <p> <b> Director:</b>  {{movieList.getMovie(movieId).director}}</p>
+                    <p> <b> Year : </b> {{movieList.getMovie(movieId).year}}</p>
+
+                    <p> <b> Showing: </b>     <span *ngFor='let hour of movieList.getMovie(movieId).hours'>
+                            {{hour}}, 
+                        </span></p>
+               
+<p>  <b>Genre: </b>   <span *ngFor='let genre of movieList.getMovie(movieId).genres'>
+        {{genre}}, 
+    </span></p>
+
+<p><b > Casting: </b> <span *ngFor='let actor of movieList.getMovie(movieId).actors'>
+        {{actor}}, 
+    </span></p>
+
+            </div>
+            <div class="card-action">
+                    <button > <a [routerLink]="[ '../../home']">Volver a listado</a></button>
+           
+            </div>
+          </div>
+        </div>
+      </div>

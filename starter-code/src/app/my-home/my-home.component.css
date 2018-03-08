@@ -1,0 +1,17 @@
+section .row {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    
+}
+
+section img{
+    height: 60vh;
+}
+
+h1 {
+    text-align: center;
+    color:blue;
+}
